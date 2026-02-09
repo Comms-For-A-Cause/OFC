@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 228 4% 24%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 228 4% 24%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 228 4% 24%;
+
+    --primary: 194 50% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 78% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 194 20% 92%;
+    --muted-foreground: 228 4% 40%;
+
+    --accent: 330 78% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 228 4% 80%;
+    --input: 228 4% 80%;
+    --ring: 194 50% 30%;
+
+    --radius: 0.25rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 228 4% 24%;
+    --sidebar-primary: 194 50% 30%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 330 78% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 228 4% 80%;
+    --sidebar-ring: 194 50% 30%;
+
+    /* Custom campaign tokens */
+    --teal: 194 50% 30%;
+    --pink: 330 78% 50%;
+    --dark-grey: 228 4% 24%;
+    --pure-black: 0 0% 0%;
+    --pure-white: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 228 4% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 228 4% 10%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 194 50% 30%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 78% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 228 4% 15%;
+    --muted-foreground: 228 4% 60%;
+    --accent: 330 78% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 228 4% 20%;
+    --input: 228 4% 20%;
+    --ring: 194 50% 30%;
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 194 50% 30%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 330 78% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 228 4% 20%;
+    --sidebar-ring: 194 50% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .section-teal {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .section-pink {
+    @apply bg-secondary text-secondary-foreground;
+  }
+
+  .section-dark {
+    background-color: hsl(var(--pure-black));
+    color: hsl(var(--pure-white));
+  }
+
+  .section-grey {
+    background-color: hsl(var(--dark-grey));
+    color: hsl(var(--pure-white));
+  }
+
+  .headline-massive {
+    @apply font-display font-extrabold uppercase leading-[0.9] tracking-tight;
+    font-size: clamp(2.5rem, 6vw, 7rem);
+  }
+
+  .headline-large {
+    @apply font-display font-bold uppercase leading-[0.95] tracking-tight;
+    font-size: clamp(2rem, 5vw, 5rem);
+  }
+
+  .headline-medium {
+    @apply font-display font-bold uppercase leading-tight tracking-tight;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  .body-large {
+    @apply font-body text-lg md:text-xl leading-relaxed;
+  }
+
+  .body-regular {
+    @apply font-body text-base leading-relaxed;
+  }
+
+  .cta-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 font-display font-bold uppercase tracking-wider 
+           bg-secondary text-secondary-foreground 
+           hover:brightness-110 transition-all duration-300 
+           text-sm md:text-base;
+  }
+
+  .cta-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 font-display font-bold uppercase tracking-wider 
+           border-2 border-current bg-transparent
+           hover:bg-primary-foreground hover:text-primary transition-all duration-300 
+           text-sm md:text-base;
+  }
+
+  .form-input-campaign {
+    @apply w-full px-4 py-3 bg-transparent border-b-2 border-foreground/30 
+           focus:border-secondary focus:outline-none transition-colors duration-300 
+           font-body text-base placeholder:opacity-50;
+  }
+
+  .form-label-campaign {
+    @apply font-display text-sm uppercase tracking-wider font-semibold mb-2 block;
+  }
+
+  .form-instruction {
+    @apply text-xs opacity-60 mt-1 font-body italic;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--pure-black));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--teal));
+}
+
+/* Selection color */
+::selection {
+  background: hsl(var(--pink));
+  color: hsl(var(--pure-white));
+}
