@@ -38,7 +38,7 @@ const Factoids = () => {
               }}
               className="text-center md:text-left"
             >
-              <p className="font-display font-extrabold text-secondary leading-none mb-4"
+              <p className="font-display font-extrabold bg-secondary text-secondary-foreground px-3 py-1 leading-none mb-4"
                  style={{ fontSize: "clamp(3rem, 6vw, 5rem)" }}
               >
                 {fact.number}

@@ -8,9 +8,9 @@ const CampaignIntro = () => {
         <ScrollReveal>
           <h2 className="headline-large max-w-4xl mb-16">
             EVERY NARRATIVE IS{" "}
-            <span className="text-secondary">EVIDENCE.</span>{" "}
+            <span className="bg-secondary text-secondary-foreground px-2">EVIDENCE.</span>{" "}
             EVERY VOICE IS A{" "}
-            <span className="text-secondary">DEMAND FOR CHANGE.</span>
+            <span className="bg-secondary text-secondary-foreground px-2">DEMAND FOR CHANGE.</span>
           </h2>
         </ScrollReveal>
 
@@ -50,7 +50,7 @@ const CampaignIntro = () => {
         {/* Divider statement */}
         <ScrollReveal delay={0.1} className="mt-20 md:mt-28">
           <div className="border-t-2 border-primary-foreground/20 pt-12">
-            <p className="headline-medium text-secondary max-w-3xl">
+            <p className="headline-medium bg-secondary text-secondary-foreground px-4 py-2 max-w-3xl">
               THIS IS FOR SURVIVORS, CAREGIVERS, ADVOCATES, AND ANYONE WHOSE LIFE 
               HAS BEEN SHAPED BY THESE INSTITUTIONS.
             </p>
