@@ -36,7 +36,7 @@ const ScrollReveal = ({
   className = "",
   threshold = 0.15,
 }: ScrollRevealProps) => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold });
+  const [ref, inView] = useInView({ triggerOnce: false, threshold });
 
   return (
     <motion.div

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -90,11 +90,12 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    font-family: 'Josefin Sans', sans-serif;
   }
 }
 
@@ -118,54 +119,128 @@
   }
 
   .headline-massive {
-    @apply font-display font-extrabold uppercase leading-[0.9] tracking-tight;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.9;
+    letter-spacing: -0.025em;
     font-size: clamp(2.5rem, 6vw, 7rem);
   }
 
   .headline-large {
-    @apply font-display font-bold uppercase leading-[0.95] tracking-tight;
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    font-size: clamp(2.5rem, 6vw, 6.5rem);
   }
 
   .headline-medium {
-    @apply font-display font-bold uppercase leading-tight tracking-tight;
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    font-size: clamp(2rem, 4vw, 4rem);
   }
 
   .body-large {
-    @apply font-body text-lg md:text-xl leading-relaxed;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.625;
+  }
+  @media (min-width: 768px) {
+    .body-large {
+      font-size: 1.25rem;
+    }
   }
 
   .body-regular {
-    @apply font-body text-base leading-relaxed;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.625;
   }
 
   .cta-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 font-display font-bold uppercase tracking-wider 
-           bg-secondary text-secondary-foreground 
-           hover:brightness-110 transition-all duration-300 
-           text-sm md:text-base;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    transition: all 0.3s;
+    font-size: 0.875rem;
+  }
+  @media (min-width: 768px) {
+    .cta-primary {
+      font-size: 1rem;
+    }
+  }
+  .cta-primary:hover {
+    filter: brightness(1.1);
   }
 
   .cta-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 font-display font-bold uppercase tracking-wider 
-           border-2 border-current bg-transparent
-           hover:bg-primary-foreground hover:text-primary transition-all duration-300 
-           text-sm md:text-base;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border: 2px solid currentColor;
+    background-color: transparent;
+    transition: all 0.3s;
+    font-size: 0.875rem;
+  }
+  @media (min-width: 768px) {
+    .cta-secondary {
+      font-size: 1rem;
+    }
+  }
+  .cta-secondary:hover {
+    background-color: hsl(var(--primary-foreground));
+    color: hsl(var(--primary));
   }
 
   .form-input-campaign {
-    @apply w-full px-4 py-3 bg-transparent border-b-2 border-foreground/30 
-           focus:border-secondary focus:outline-none transition-colors duration-300 
-           font-body text-base placeholder:opacity-50;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: transparent;
+    border-bottom: 2px solid hsl(var(--foreground) / 0.3);
+    transition: border-color 0.3s;
+  }
+  .form-input-campaign:focus {
+    border-color: hsl(var(--secondary));
+    outline: none;
+  }
+  .form-input-campaign::placeholder {
+    opacity: 0.5;
   }
 
   .form-label-campaign {
-    @apply font-display text-sm uppercase tracking-wider font-semibold mb-2 block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
   }
 
   .form-instruction {
-    @apply text-xs opacity-60 mt-1 font-body italic;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.75rem;
+    opacity: 0.6;
+    margin-top: 0.25rem;
+    font-style: italic;
   }
 }
 
@@ -186,4 +261,174 @@
 ::selection {
   background: hsl(var(--pink));
   color: hsl(var(--pure-white));
+}
+
+/* Lumina Interactive Slider Styles */
+.lumina-slider-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.lumina-slider-wrapper.loaded {
+  opacity: 1;
+}
+
+.lumina-webgl-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.lumina-slide-number {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-family: 'Source Sans Pro', monospace;
+  font-size: var(--font-size-mono, clamp(10px, 1.2vw, 12px));
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 10;
+  letter-spacing: 0.1em;
+}
+
+.lumina-slide-total {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  font-family: 'Source Sans Pro', monospace;
+  font-size: var(--font-size-mono, clamp(10px, 1.2vw, 12px));
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  letter-spacing: 0.1em;
+}
+
+.lumina-slide-total::before {
+  content: '/';
+  margin-right: 0.5rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.lumina-slide-content {
+  position: absolute;
+  bottom: 8rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.lumina-slide-title {
+  font-family: 'Josefin Sans', serif;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.lumina-slide-description {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 500px;
+  line-height: 1.5;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.lumina-slides-navigation {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.lumina-slides-navigation::-webkit-scrollbar {
+  display: none;
+}
+
+.lumina-slide-nav-item {
+  flex: 1;
+  min-width: 120px;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  border: none;
+  background: transparent;
+}
+
+.lumina-slide-nav-item.active,
+.lumina-slide-nav-item:hover {
+  opacity: 1;
+}
+
+.lumina-slide-progress-line {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.lumina-slide-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: #d4af37;
+  transition: width 0.1s ease, opacity 0.3s ease;
+}
+
+.lumina-slide-nav-title {
+  font-family: 'Source Sans Pro', monospace;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .lumina-slide-content {
+    bottom: 10rem;
+    left: 1rem;
+    right: 1rem;
+  }
+  
+  .lumina-slides-navigation {
+    left: 1rem;
+    right: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .lumina-slide-nav-item {
+    min-width: 80px;
+  }
+  
+  .lumina-slide-number,
+  .lumina-slide-total {
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .lumina-slide-total {
+    right: 3rem;
+  }
 }
