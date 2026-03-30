@@ -40,11 +40,11 @@ const WantToTakeAction = () => {
               healthcare infrastructure across Maharashtra.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/White_Paper_CareNotCustody_OFC.pdf" target="_blank" rel="noopener noreferrer" className="cta-primary gap-2 bg-white text-black hover:bg-white/90">
+              <a href="White-Paper.pdf" target="_blank" rel="noopener noreferrer" className="cta-primary gap-2 bg-white text-black hover:bg-white/90">
                 <ExternalLink className="w-4 h-4" />
                 View White Paper
               </a>
-              <a href="/White_Paper_CareNotCustody_OFC.pdf" download className="cta-secondary gap-2 text-black border-black hover:bg-black hover:text-white">
+              <a href="White-Paper.pdf" download className="cta-secondary gap-2 text-black border-black hover:bg-black hover:text-white">
                 <Download className="w-4 h-4" />
                 Download PDF
               </a>
@@ -58,13 +58,13 @@ const WantToTakeAction = () => {
             className="relative"
           >
             <a 
-              href="/White_Paper_CareNotCustody_OFC.pdf" 
+              href="White-Paper.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-muted aspect-[4/5] md:aspect-[3/4] relative group cursor-pointer transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl overflow-hidden block"
             >
               <iframe
-                src="/White_Paper_CareNotCustody_OFC.pdf#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0"
+                src="White-Paper.pdf#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0"
                 className="w-full h-full border-0"
                 title="OFC White Paper Preview"
               />

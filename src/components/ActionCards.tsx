@@ -80,7 +80,7 @@ const ActionCards = () => {
             <p className="font-semibold text-black/80 mb-6 text-sm flex-grow">
               Read our comprehensive white paper mapping and analyzing evidence on quality status, access to rights, and gender-sensitivity within public mental healthcare infrastructure across Maharashtra.
             </p>
-            <a href="/White_Paper_CareNotCustody_OFC.pdf" target="_blank" rel="noopener noreferrer" className="cta-primary text-sm w-full bg-pink-500 text-white hover:bg-pink-600 text-center block mt-auto">
+            <a href="White-Paper.pdf" target="_blank" rel="noopener noreferrer" className="cta-primary text-sm w-full bg-pink-500 text-white hover:bg-pink-600 text-center block mt-auto">
               View White Paper
             </a>
           </motion.div>
@@ -102,9 +102,9 @@ const ActionCards = () => {
             <p className="font-semibold text-black/80 mb-6 text-sm flex-grow">
               Use our patients' rights education resources to learn about your rights and responsibility as a patient or caregiver, as well as a human rights defender working with those accessing Maharashtra's public mental healthcare system.
             </p>
-            <button className="cta-secondary text-sm w-full text-black border-black hover:bg-black hover:text-white mt-auto">
-              Coming Soon
-            </button>
+            <a href="/Know-Your-Rights.pdf" target="_blank" rel="noopener noreferrer" className="cta-primary text-sm w-full bg-pink-500 text-white hover:bg-pink-600 text-center block mt-auto">
+              View Rights Guide
+            </a>
           </motion.div>
 
           {/* Card 5: Watch documentary */}

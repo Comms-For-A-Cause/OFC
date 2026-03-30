@@ -18,7 +18,7 @@ const Navbar = () => {
     { name: "The Problem", href: "#problem-statement" },
     { name: "The Solution", href: "#solution-summary" },
     { name: "Take Action", href: "#action-cards" },
-    { name: "Map", href: "#map-section" },
+    { name: "Living Map", href: "#map-section" },
     { name: "Share Your Story", href: "#narrative-form" },
     { name: "White Paper", href: "#want-to-take-action" },
     { name: "Connect", href: "#footer" },
